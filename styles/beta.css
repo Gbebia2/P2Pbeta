@@ -1,0 +1,185 @@
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background-color: #004c6c; /* Deep blue background */
+    padding: 20px 0;
+    color: #ffffff; /* White text */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    height: 100%;
+    width: 0;
+    background-color: #f0f0f0; /* Light grey background */
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    width: 250px; /* Adjust width as needed */
+}
+
+.sidebar .sidebar-toggle {
+    position: absolute;
+    top: 70px;
+    left: -70px; /* Adjust to be visible when expanded */
+    background-color: #ffffff; /* Deep blue */
+    color: rgb(0, 0, 0);
+    border-color: #003c6c;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: left 0.3s ease; /* Smooth transition for toggle button */
+}
+
+.sidebar.open .sidebar-toggle {
+    left: 210px; /* Adjust position when sidebar is open */
+}
+
+.sidebar .online-users {
+    padding: 20px;
+    height: 100%;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #003c6c; /* Deep blue */
+}
+
+#user-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#user-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+#user-list li:last-child {
+    border-bottom: none;
+}
+
+
+
+.button {
+    background-color: #ffffff; /* Deeper blue */
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #005a9c; /* Darker blue for hover */
+}
+
+.hero {
+    background-color: #2c3e50; /* Deep grey background */
+    padding: 40px 0;
+    text-align: center;
+    color: #ffffff; /* White text */
+}
+
+.hero h2 {
+    color: #ffffff;
+}
+
+.how-it-works {
+    background-color: #34495e; /* Slightly lighter deep grey */
+    padding: 40px 20px;
+    color: #000000; /* White text */
+}
+
+.how-it-works h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.popular-bets {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.bet {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #004c6c; /* Deep blue background */
+    padding: 20px 0;
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+.footer-info {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}

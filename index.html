@@ -3,108 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetMatch - Peer-to-Peer Betting</title>
-    <link rel="stylesheet" href="beta.css">
+    <title>P2P Betting Home</title>
+    <link rel="stylesheet" href="styles/beta.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">BetMatch</div>
+            <h1>P2P Betting</h1>
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Deposit</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
+                <a href="join.html" class="button">Join Now</a>
+                <a href="login.html" class="button">Login</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Banner -->
-    <section class="main-banner">
+    <!-- Sidebar and toggle button -->
+    <div class="sidebar" id="sidebar">
+       <button class="sidebar-toggle" id="sidebar-toggle">Online</button>
+       <div class="online-users">
+           <h3>Online</h3>
+           <ul id="user-list">
+               <!-- JavaScript will dynamically add users here -->
+           </ul>
+       </div>
+    </div>
+
+    <section class="hero">
         <div class="container">
-            <h1>Bet Directly Against Other Players</h1>
-            <p>Experience the thrill of peer-to-peer betting on your favorite sports events.</p>
-            <a href="Join.html" class="cta-button">Join Now</a>
+            <h2>Welcome to the Ultimate P2P Betting Experience!</h2>
+            <p>Join now and start betting on your favorite sports with others like you.</p>
+            <a href="joinorlogin.html" class="button">Get Started</a>
         </div>
     </section>
 
-    <!-- Featured Events -->
-    <section class="featured-events">
+    <section class="how-it-works">
         <div class="container">
-            <h2>Featured Events</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <img src="football.jpg" alt="Football Event">
-                    <h3>Chelsea vs Manchester City</h3>
-                    <a href="#" class="bet-button">Place a Bet</a>
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Create a Bet</h3>
+                    <p>Set up your bet and wait for someone to accept it.</p>
                 </div>
-                <div class="event-card">
-                    <img src="basketball.jpg" alt="Basketball Event">
-                    <h3>Lakers vs Warriors</h3>
-                    <a href="#" class="bet-button">Place a Bet</a>
+                <div class="step">
+                    <h3>Accept a Bet</h3>
+                    <p>Find a bet you like and accept it to join the action.</p>
                 </div>
-                <div class="event-card">
-                    <img src="tennis.jpg" alt="Tennis Event">
-                    <h3>Federer vs Nadal</h3>
-                    <a href="#" class="bet-button">Place a Bet</a>
+                <div class="step">
+                    <h3>Win the Pot</h3>
+                    <p>If you win, the pot is yours!</p>
                 </div>
-                <!-- Add more event cards as needed -->
             </div>
         </div>
     </section>
 
-    <div class="sports-container">
-        <h3>Sports</h3>
-        <ul class="sports-list">
-            <li class="sport-type">Football</li>
-            <li class="sport-type">Basketball</li>
-            <li class="sport-type">Tennis</li>
-        </ul>
-    </div>   
-
-    <div class="online-users-container">
-        <h3>Online Users</h3>
-        <ul class="online-users-list">
-            <li class="online-user">User 1</li>
-            <li class="online-user">User 2</li>
-            <li class="online-user">User 3</li>
-            <li class="online-user">User 4</li>
-        </ul>
-    </div>    
-
-    <!-- Promotions -->
-    <section class="promotions">
+    <section class="popular-bets">
         <div class="container">
-            <h2>Exclusive Promotions</h2>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <h3>Welcome Bonus</h3>
-                    <p>Get a 100% bonus on your first deposit!</p>
-                </div>
-                <div class="promo-card">
-                    <h3>Weekly Free Bets</h3>
-                    <p>Earn free bets every week by participating in our events.</p>
-                </div>
-                <!-- Add more promotion cards as needed -->
+            <h2>Popular Bets</h2>
+            <div class="bet">
+                <h3>Match: Chelsea vs. Manchester City</h3>
+                <p>Current Pot: $500</p>
+                <a href="#" class="button">Place Your Bet</a>
+            </div>
+            <div class="bet">
+                <h3>Game: Lakers vs. Celtics</h3>
+                <p>Current Pot: $300</p>
+                <a href="#" class="button">Place Your Bet</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <section class="footer">
         <div class="container">
-            <p>&copy; 2024 BetMatch. All rights reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+            <div class="footer-info">
+                <p>&copy; 2024 P2P Betting. All rights reserved.</p>
+                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+            <div class="footer-social">
+                <p>Follow us:</p>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

@@ -9,11 +9,52 @@
             font-family: Arial, sans-serif;
             background-color: #f9f9f9; /* Light gray background */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
+        .nav-bar {
+            width: 100%;
+            background-color: #004c6c; /* Deep blue background */
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff; /* White text */
+        }
+
+        .nav-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0px 50px;
+            font-weight: bold
+        }
+        .nav-bar a:hover {
+            background-color: #005a9c;
+        }
+
+        .nav-bar a.button {
+            color: #000000; /* Black text color */
+        }
+
+        .button {
+            background-color: #ffffff; /* Deeper blue */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
         .login-container {
             background-color: #ffffff; /* White background */
             padding: 20px;
@@ -73,6 +114,10 @@
     </style>
 </head>
 <body>
+    <div class="nav-bar"></div>
+        <h1>P2P Betting</h1>
+        <a href="index.html" class="button">Home</a>
+    </div>
     <div class="login-container">
         <h2>Login</h2>
         <form action="/submit-login" method="post">
