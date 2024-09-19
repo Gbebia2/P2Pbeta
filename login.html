@@ -15,7 +15,7 @@
             height: 100vh;
             margin: 0;
         }
-
+        
         .nav-bar {
             width: 100%;
             background-color: #004c6c; /* Deep blue background */
@@ -27,32 +27,36 @@
             justify-content: space-between;
             align-items: center;
             color: #ffffff; /* White text */
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .nav-bar h1 {
+            margin: 0;
+            font-size: 1.5rem;
         }
 
         .nav-bar a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0px 50px;
-            font-weight: bold
+            margin: 0 50px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
         .nav-bar a:hover {
-            background-color: #005a9c;
+            background-color: #005a9c; /* Lighter blue on hover */
         }
 
         .nav-bar a.button {
-            color: #000000; /* Black text color */
+            background-color: #ffffff; /* White background for buttons */
+            color: #004c6c; /* Deep blue text color for buttons */
         }
 
-        .button {
-            background-color: #ffffff; /* Deeper blue */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
+        .nav-bar a.button:hover {
+            background-color: #e0e0e0; /* Light gray background on hover */
+            color: #004c6c; /* Deep blue text color on hover */
         }
 
         .login-container {
@@ -114,7 +118,7 @@
     </style>
 </head>
 <body>
-    <div class="nav-bar"></div>
+    <div class="nav-bar">
         <h1>P2P Betting</h1>
         <a href="index.html" class="button">Home</a>
     </div>

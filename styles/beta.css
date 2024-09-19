@@ -106,7 +106,12 @@ nav a {
 }
 
 .button:hover {
-    background-color: #005a9c; /* Darker blue for hover */
+    background-color: #e0e0e0; /* Light gray background on hover */
+    color: #004c6c; /* Deep blue text color on hover */
+}
+
+.nav-bar a:hover {
+    background-color: #005a9c; /* Lighter blue on hover */
 }
 
 .hero {
