@@ -90,8 +90,6 @@ nav a {
     border-bottom: none;
 }
 
-
-
 .button {
     background-color: #ffffff; /* Deeper blue */
     color: #000000;
@@ -187,4 +185,25 @@ nav a {
 .footer-social img {
     width: 24px;
     height: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: 100%; /* Full width for smaller screens */
+    }
+    .sidebar {
+        top: 60px; /* Adjust based on header height */
+    }
+    .hero, .how-it-works, .popular-bets {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
 }
