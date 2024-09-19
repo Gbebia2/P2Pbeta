@@ -188,10 +188,10 @@ nav a {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header .container {
         flex-direction: column;
-        text-align: center;
+        text-align: right;
     }
     .steps {
         flex-direction: column;
