@@ -207,15 +207,16 @@ footer nav ul li a {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
     /* Navigation */
-    header nav ul {
-        flex-direction: column;
-        display: none;
-    }
-
-    header nav ul.active {
-        display: flex;
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        nav ul li {
+            margin-bottom: 15px;
+        }
     }
 
     /* Hero Section */
