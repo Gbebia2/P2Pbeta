@@ -1,209 +1,260 @@
-body {
-    font-family: Verdana, Tahoma, sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Header */
 header {
-    background-color: #004c6c; /* Deep blue background */
-    padding: 20px 0;
-    color: #ffffff; /* White text */
-}
-
-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    margin-left: 20px;
-}
-
-/* Sidebar styles */
-.sidebar {
-    position: fixed;
-    right: 0;
-    top: 70px;
-    height: 100%;
-    width: 0;
-    background-color: #f0f0f0; /* Light grey background */
-    transition: width 0.3s ease;
-    z-index: 1000;
-}
-
-.sidebar.open {
-    width: 250px; /* Adjust width as needed */
-}
-
-.sidebar .sidebar-toggle {
-    position: absolute;
-    top: 70px;
-    left: -70px; /* Adjust to be visible when expanded */
-    background-color: #ffffff; /* Deep blue */
-    color: rgb(0, 0, 0);
-    border-color: #003c6c;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: left 0.3s ease; /* Smooth transition for toggle button */
-}
-
-.sidebar.open .sidebar-toggle {
-    left: 210px; /* Adjust position when sidebar is open */
-}
-
-.sidebar .online-users {
     padding: 20px;
-    height: 100%;
-    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    background-color: #005f99;
+    color: white;
 }
 
-.sidebar h3 {
-    margin-top: 0;
-    color: #003c6c; /* Deep blue */
-}
-
-#user-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#user-list li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    color: #333;
-}
-
-#user-list li:last-child {
-    border-bottom: none;
-}
-
-.button {
-    background-color: #ffffff; /* Deeper blue */
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
+header .logo {
+    font-size: 24px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
     text-decoration: none;
+    font-size: 16px;
 }
 
-.button:hover {
-    background-color: #e0e0e0; /* Light gray background on hover */
-    color: #004c6c; /* Deep blue text color on hover */
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.nav-bar a:hover {
-    background-color: #005a9c; /* Lighter blue on hover */
-}
-
+/* Hero Section */
 .hero {
-    background-color: #2c3e50; /* Deep grey background */
-    padding: 40px 0;
     text-align: center;
-    color: #ffffff; /* White text */
+    padding: 50px;
+    background-color: #007acc;
+    color: white;
 }
 
-.hero h2 {
-    color: #ffffff;
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
+.hero p {
+    font-size: 18px;
+}
+
+/* How It Works Section */
 .how-it-works {
-    background-color: #34495e; /* Slightly lighter deep grey */
     padding: 40px 20px;
-    color: #000000; /* White text */
+    background-color: white;
+    text-align: center;
 }
 
 .how-it-works h2 {
-    text-align: center;
-    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.steps {
+.how-it-works .steps {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.step {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    padding: 20px;
+.how-it-works .step {
     width: 30%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    text-align: center;
-}
-
-.popular-bets {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.bet {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
     padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-    background-color: #004c6c; /* Deep blue background */
-    padding: 20px 0;
-    color: #ffffff; /* White text */
-    text-align: center;
-}
-
-.footer-info {
+.how-it-works .step h3 {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.footer-social a {
+/* Featured Events Section */
+.featured-events {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.featured-events h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.featured-events .event {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-events .event button {
+    padding: 10px 20px;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.featured-events .event button:hover {
+    background-color: #007acc;
+}
+
+/* Sidebars */
+.sidebar-left, .sidebar-right {
+    position: fixed;
+    top: 80px;
+    width: 250px;
+    height: calc(100% - 80px);
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-left {
+    left: -240px;
+}
+
+.sidebar-right {
+    right: -240px;
+}
+
+.sidebar-left.active {
+    transform: translateX(250px);
+}
+
+.sidebar-right.active {
+    transform: translateX(-250px);
+}
+
+.sidebar-content a {
+    display: block;
+    color: white;
+    padding: 10px 0;
     text-decoration: none;
-    color: #ffffff;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-content p {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+/* Toggle Buttons for Sidebars */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    background-color: #005f99;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    z-index: 1001;
+}
+
+.sidebar-left .toggle-btn {
+    right: -60px;
+}
+
+.sidebar-right .toggle-btn {
+    left: -60px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005f99;
+    color: white;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
     margin: 0 10px;
 }
 
-.footer-social img {
-    width: 24px;
-    height: 24px;
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 800px) {
-    header .container {
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navigation */
+    header nav ul {
         flex-direction: column;
-        text-align: right;
+        display: none;
     }
-    .steps {
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* How It Works Steps */
+    .how-it-works .steps {
         flex-direction: column;
-        align-items: center;
     }
-    .step {
-        width: 100%; /* Full width for smaller screens */
+
+    .how-it-works .step {
+        width: 100%;
     }
-    .sidebar {
-        top: 60px; /* Adjust based on header height */
+
+    /* Featured Events */
+    .featured-events h2 {
+        font-size: 24px;
     }
-    .hero, .how-it-works, .popular-bets {
-        padding: 20px 10px; /* Reduce padding on smaller screens */
+
+    .featured-events .event button {
+        width: 100%;
+    }
+
+    /* Sidebar */
+    .sidebar-left, .sidebar-right {
+        width: 200px;
+    }
+
+    .sidebar-left.active {
+        transform: translateX(200px);
+    }
+
+    .sidebar-right.active {
+        transform: translateX(-200px);
     }
 }

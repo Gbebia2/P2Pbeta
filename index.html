@@ -3,90 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P2P Betting Home</title>
-    <link rel="stylesheet" href="styles/beta.css">
+    <title>P2P Betting Site</title>
+    <link rel="stylesheet" href="styles/beta.css"> <!-- External CSS file -->
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
-        <div class="container">
-            <h1>P2P Betting</h1>
-            <nav>
-                <a href="Join.html" class="button">Join Now</a>
-                <a href="login.html" class="button">Login</a>
-            </nav>
-        </div>
+        <div class="logo">P2P Bet</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Bet</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Sidebar and toggle button -->
-    <div class="sidebar" id="sidebar">
-       <button class="sidebar-toggle" id="sidebar-toggle">Online</button>
-       <div class="online-users">
-           <h3>Online</h3>
-           <ul id="user-list">
-               <!-- JavaScript will dynamically add users here -->
-           </ul>
-       </div>
+    <!-- Hero section -->
+    <section class="hero">
+        <h1>Bet with Others, No Middleman!</h1>
+        <p>Join the competition, place your bets directly with other users, and win big!</p>
+    </section>
+
+    <!-- How it works section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Sign Up or Login</h3>
+                <p>Create an account or log in to start betting.</p>
+            </div>
+            <div class="step">
+                <h3>2. Place Your Bet</h3>
+                <p>Select a match, bet directly against other users.</p>
+            </div>
+            <div class="step">
+                <h3>3. Win & Withdraw</h3>
+                <p>Collect your winnings instantly and withdraw at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured events section -->
+    <section class="featured-events">
+        <h2>Featured Events</h2>
+        <div class="event">
+            <p>Match: Chelsea vs Manchester City</p>
+            <button>Bet Now</button>
+        </div>
+        <div class="event">
+            <p>Match: Real Madrid vs Barcelona</p>
+            <button>Bet Now</button>
+        </div>
+        <!-- Add more events as needed -->
+    </section>
+
+    <!-- Collapsible sidebar: Account Actions -->
+    <div class="sidebar-left" id="accountActionsSidebar">
+        <button class="toggle-btn" onclick="toggleSidebar('accountActionsSidebar')">Account</button>
+        <div class="sidebar-content">
+            <a href="#">Deposit</a>
+            <a href="#">Withdraw</a>
+            <a href="#">Bet History</a>
+            <a href="#">Notifications</a>
+        </div>
     </div>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to the Ultimate P2P Betting Experience!</h2>
-            <p>Join now and start betting on your favorite sports with others like you.</p>
-            <a href="Join.html" class="button">Get Started</a>
+    <!-- Collapsible sidebar: Online Users -->
+    <div class="sidebar-right" id="onlineUsersSidebar">
+        <button class="toggle-btn" onclick="toggleSidebar('onlineUsersSidebar')">Online</button>
+        <div class="sidebar-content">
+            <p>User1</p>
+            <p>User2</p>
+            <p>User3</p>
+            <!-- Add more online users as needed -->
         </div>
-    </section>
+    </div>
 
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>Create a Bet</h3>
-                    <p>Set up your bet and wait for someone to accept it.</p>
-                </div>
-                <div class="step">
-                    <h3>Accept a Bet</h3>
-                    <p>Find a bet you like and accept it to join the action.</p>
-                </div>
-                <div class="step">
-                    <h3>Win the Pot</h3>
-                    <p>If you win, the pot is yours!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 P2P Bet. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
 
-    <section class="popular-bets">
-        <div class="container">
-            <h2>Popular Bets</h2>
-            <div class="bet">
-                <h3>Match: Chelsea vs. Manchester City</h3>
-                <p>Current Pot: $500</p>
-                <a href="#" class="button">Place Your Bet</a>
-            </div>
-            <div class="bet">
-                <h3>Game: Lakers vs. Celtics</h3>
-                <p>Current Pot: $300</p>
-                <a href="#" class="button">Place Your Bet</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="footer">
-        <div class="container">
-            <div class="footer-info">
-                <p>&copy; 2024 P2P Betting. All rights reserved.</p>
-                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
-            <div class="footer-social">
-                <p>Follow us:</p>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </section>
-
-    <script src="scripts/scripts.js"></script>
+    <!-- JavaScript to handle collapsible sidebars -->
+    <script>
+        function toggleSidebar(id) {
+            var sidebar = document.getElementById(id);
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
