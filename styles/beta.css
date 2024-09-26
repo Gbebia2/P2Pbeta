@@ -40,10 +40,13 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    background-color: rgb(0, 162, 255);
 }
 
 /* Hero Section */
@@ -130,6 +133,7 @@ header nav ul li a:hover {
     background-color: #333;
     color: white;
     padding: 20px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
     z-index: 1000;
 }
@@ -171,7 +175,7 @@ header nav ul li a:hover {
     color: white;
     padding: 10px 15px;
     cursor: pointer;
-    border: none;
+    border-radius: 3px;
     z-index: 1001;
 }
 
@@ -203,20 +207,18 @@ footer nav ul li {
 
 footer nav ul li a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Mobile Styles */
+@media only screen and (max-width: 414px) {
     /* Navigation */
-    @media (max-width: 768px) {
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        nav ul li {
-            margin-bottom: 15px;
-        }
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul.active {
+        display: flex;
     }
 
     /* Hero Section */
@@ -248,7 +250,7 @@ footer nav ul li a {
 
     /* Sidebar */
     .sidebar-left, .sidebar-right {
-        width: 200px;
+        width: 250px;
     }
 
     .sidebar-left.active {
